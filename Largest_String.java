@@ -5,7 +5,7 @@ public class Largest_String {
         String Largest = fruits[0];
         for(int i =1 ; i<fruits.length ; i++){
             
-            if(Largest.compareTo(fruits[i])<0){
+            if(Largest.compareToIgnoreCase(fruits[i])<0){
                 Largest = fruits[i];
             }
         }
