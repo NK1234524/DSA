@@ -9,5 +9,8 @@ public class Stringfunction_Substring {
     }
     public static void main(String args[]){
         substring("Nishant", 0, 3);
+        //Alternative way to get the result is 
+        String Name=  "Nishant Kumar";
+        System.out.println(Name.substring(0,3));
     }    
 }
