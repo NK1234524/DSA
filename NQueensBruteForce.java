@@ -1,5 +1,5 @@
 public class NQueensBruteForce {    
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         int n = 4; // You can change N here
         char[][] board = new char[n][n];
         // Initialize board with '.'
@@ -7,7 +7,7 @@ public class NQueensBruteForce {
             for (int j = 0; j < n; j++) {
                 board[i][j] = '.';
             }
-        }
+        } 
         solveNQueens(board, 0);
     }
     // Recursive function to solve the problem
