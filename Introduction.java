@@ -8,6 +8,7 @@ public class Introduction{
         List.add(3);
         List.add(4);
         List.add(5);
+        // List.add(1,2); Index 1 & element 2
 
         System.out.println("The Array List is : "+List);
        //Get
