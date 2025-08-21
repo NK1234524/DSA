@@ -1,7 +1,7 @@
 public class Gridways_Optimised {
     public static int gridWays(int m, int n) {
         int totalMoves = m + n - 2;
-        int r = Math.min(m - 1, n - 1); // choose smaller for efficiency
+        int r = Math.min(m - 1, n - 1); 
         long result = 1;
 
         for (int i = 1; i <= r; i++) {
