@@ -23,5 +23,8 @@ public class Introduction{
        List.set(4,10);
        List.set(2,20);
        System.out.println(List);
+
+       //Contains
+       System.out.println(List.contains(3));
     }
 }
