@@ -3,7 +3,7 @@ public  class Maximum {
 
     public static void main(String args[]){
 
-        ArrayList<Integer>List = new ArrayList<Integer>();
+        ArrayList<Integer>List = new ArrayList<>();
         List.add(1);
         List.add(2);
         List.add(3);
