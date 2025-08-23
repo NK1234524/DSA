@@ -20,5 +20,6 @@ public class Multi_Dimensional_ArrayList {
             }
             System.out.println();
         }
+          System.out.println(mainList);
     }
 }
