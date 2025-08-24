@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 public class Array_List_mainList {
@@ -17,6 +16,13 @@ public class Array_List_mainList {
         mainList.add(List3);
 
         System.out.println(mainList);
-        
+
+        for(int i=0 ; i<mainList.size();i++){
+            ArrayList<Integer>cuArrayList = mainList.get(i);
+            for(int j=0;j<cuArrayList.size();j++){
+                System.out.print(cuArrayList.get(j)+" ");
+            }
+            System.out.println();
+        }        
     }
 }
