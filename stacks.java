@@ -11,6 +11,9 @@ public class stacks{
             List.add(data);
         }
         public static int pop(){
+            if(isEmpty()){
+                return -1 ;
+            }
             int top = List.size()-1;
             List.get(List.size()-1);
             return top;
