@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+public class newS_Array_List {
+    public static class Stack{
+        static ArrayList<Integer> List = new ArrayList<>();
+
+        public static boolean isEmpty(){
+            return List.size()==0;
+        }
+        public static void push(int data){
+            List.add(data);
+        }
+        public static int pop(){
+            if(isEmpty()){
+                return -1;   
+            }
+            int top = List.size()-1;
+            List.get(List.size()-1);
+            return top;
+        }
+        public static int peek(){
+            return List.size()-1;
+        }
+    }
+
+
+    public static void main(String args[]){
+        Stack.push(3);//bottom
+        Stack.push(4);
+        Stack.push(5);//Top
+        System.out.print(Stack.List);
+
+    }
+}
