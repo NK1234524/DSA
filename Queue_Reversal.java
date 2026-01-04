@@ -16,6 +16,7 @@ public class Queue_Reversal {
         q.add(3);
         q.add(4);
         q.add(5);
+        reverse(q);
         while(!q.isEmpty()){
             System.out.print(q.remove()+" ");
         }
