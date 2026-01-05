@@ -50,6 +50,7 @@ public class Circular_Queue {
                 return -1 ;
             }
             return arr[front];
+            
         }
     }
 
