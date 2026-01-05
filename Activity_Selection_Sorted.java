@@ -15,8 +15,9 @@ public class Activity_Selection_Sorted {
         }
 
         // STEP 2: sort by end time
+        //Lamda Function
         Arrays.sort(activities, Comparator.comparingInt(o -> o[2]));
-
+//here comparator is non another then an interface 
         // STEP 3: greedy selection
         int maxAct = 1;
         ArrayList<Integer> ans = new ArrayList<>();
