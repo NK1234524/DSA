@@ -9,6 +9,7 @@ public class Binary_Tree_Preorder {
             this.left  = null ;
         }
     }    
+    //Preorder Traversing Ro->L->R
     public static void Preorder(Node root){
         if(root == null){
             return ;
