@@ -9,11 +9,19 @@ public class Binary_Tree_Preorder {
             this.left  = null ;
         }
     }    
+    public static void Preorder(Node root){
+        if(root == null){
+            return ;
+        }
+        System.out.print(root.data+" ");
+        Preorder(root.left);
+        Preorder(root.right);
+    }
     public static void main(String[] args) {
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree TREE = new BinaryTree();
         Node root = TREE.BuildTree(nodes);
-        System.out.println(root.data);
+        Preorder(root);
     }
 
     public static class BinaryTree{
@@ -29,6 +37,5 @@ public class Binary_Tree_Preorder {
             newNode.right= BuildTree(nodes);
             return newNode;
         }
-
-    }
+    }    
 }
