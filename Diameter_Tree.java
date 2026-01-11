@@ -1,3 +1,5 @@
+//TC-->O(n)
+//Approach 1
 public class Diameter_Tree {
 
     public static class Node{
