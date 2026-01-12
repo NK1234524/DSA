@@ -41,5 +41,17 @@ public class subtree {
     }
     public static void main(String args[]){
 
+        Node newNode = new Node(1);
+        newNode.left = new Node(2);
+        newNode.right = new Node(3);
+        newNode.left.left = new Node(4);
+
+        Node newNode1 = new Node(5);
+        newNode1.left = new Node(2);
+        newNode1.right = new Node(3);
+        newNode1.left.left = new Node(4);
+
+        System.out.print(isSubtree(newNode, newNode1));
+
     }
 }
