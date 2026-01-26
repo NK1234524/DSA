@@ -4,7 +4,7 @@ public class intro_BSTT {
 
 
     static class Node{
-        int data;
+        int data;   
         Node left ,right;
         Node(int data){
             this.data = data;
@@ -55,6 +55,41 @@ public class intro_BSTT {
         }        
     }
 
+
+    public static Node delete(Node root ,int val){
+        if(root.data<val){
+            root.right = delete(root.right ,val);
+        }
+        else if(root.data >val){
+            root.left = delete(root.left ,val);
+        }
+        else{
+            //Case 1 :leaf node 
+            if(root.left==null && root.right==null){
+                return null;
+            }
+            //Case 2 :single child
+            if(root.left == null){
+                return root.right;
+            }
+            else if(root.right == null){
+                return root.left;
+            }
+            //Case 3 :both children
+            Node IS = findInorderSuccessor(root.right);
+            root.data =IS.data;
+            root.right = delete(root.right ,IS.data);
+        }
+        return root ;
+    }
+
+    public static Node findInorderSuccessor(Node root){
+        while(root.left!=null){
+            root=root.left;
+        }
+        return root;
+    }
+
     public static void main(String[] args) {
 
         int values[] = {4,6,1,3,9};
@@ -79,5 +114,10 @@ public class intro_BSTT {
         else{
             System.out.print("Not Found");
         }
+
+        delete(root, 1);
+        System.out.println();
+        Inorder(root);
+
     }
 }
