@@ -90,6 +90,23 @@ public class intro_BSTT {
         return root;
     }
 
+
+    public static void Print_Rnage(Node root , int k1 ,int k2){
+        if(root == null){
+            return;
+        }
+        if(root.data>=k1 && root.data<=k2){
+            Print_Rnage(root.left, k1, k2);
+            System.out.print(root.data+" ");
+            Print_Rnage(root.right, k1, k2);
+        }
+        else if(root.data<k1){
+            Print_Rnage(root.left, k1, k2);;
+        }
+        else{
+            Print_Rnage(root.right, k1, k2);
+        }
+    }
     public static void main(String[] args) {
 
         int values[] = {4,6,1,3,9};
@@ -118,6 +135,8 @@ public class intro_BSTT {
         delete(root, 1);
         System.out.println();
         Inorder(root);
+
+        Print_Rnage(root, 1 ,6);
 
     }
 }
