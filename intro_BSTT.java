@@ -107,6 +107,41 @@ public class intro_BSTT {
             Print_Rnage(root.right, k1, k2);
         }
     }
+    public static void Print_Root_Leaf(ArrayList<Integer>path){
+        for(int i =0 ; i<path.size() ;i++){
+            System.out.print(path.get(i)+"->");
+        }
+        System.out.print("Null");
+    }
+
+    public static void Print_Leaf(Node root , ArrayList<Integer>path){
+        if(root == null){
+            return ;
+        }
+        path.add(root.data);
+        if(root.left == null && root.right == null){
+            Print_Root_Leaf(path);            
+        }
+        else {
+            Print_Leaf(root.left, path);
+            Print_Leaf(root.right, path);
+        }
+        path.remove(path.size()-1);
+    }
+
+    public static boolean ISvalue(Node root , Node min , Node max){
+        if(root == null){
+            return true;
+        }
+        if(max!=null && root.data>=max.data){
+            return false;
+        }
+        else if(min!=null && root.data<=min.data){
+            return false;
+        }
+        return ISvalue(root.left, min, root)&&ISvalue(root.right, root, max);
+    }
+
     public static void main(String[] args) {
 
         int values[] = {4,6,1,3,9};
@@ -115,28 +150,26 @@ public class intro_BSTT {
             root = BST(root, values[i]);
         }        
 
-        Inorder(root);
+        // Inorder(root);
 
-        System.out.println();
+        // System.out.println();
 
-        System.out.println("NODE : ");
+        // System.out.println("NODE : ");
 
-        Scanner val = new Scanner (System.in);
+        // Scanner val = new Scanner (System.in);
         
-        int key = val.nextInt();
+        // int key = val.nextInt();
 
-        if(Search(root,key )){
-            System.out.println("Found");
-        }
-        else{
-            System.out.print("Not Found");
-        }
+        // if(Search(root,key )){
+        //     System.out.println("Found");
+        // }
+        // else{
+        //     System.out.print("Not Found");
+        // }
 
-        delete(root, 1);
-        System.out.println();
-        Inorder(root);
+        
 
-        Print_Rnage(root, 1 ,6);
+        Print_Leaf(root , new ArrayList<>());
 
     }
 }
